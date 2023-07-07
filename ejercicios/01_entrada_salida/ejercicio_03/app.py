@@ -33,8 +33,13 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
 
+
     def btn_mostrar_on_click(self):
-        pass
+        nombre = self.txt_nombre.get()
+
+        nombre = nombre.capitalize()
+
+        alert("Ejercicio 3", nombre)
                 
     
 if __name__ == "__main__":
