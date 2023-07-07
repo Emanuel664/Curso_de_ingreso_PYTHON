@@ -46,16 +46,18 @@ class App(customtkinter.CTk):
     def btn_convertir_c_f_on_click(self):
         centigrados = float(self.txt_temperatura_c.get())
         total = (centigrados * 9/5) + 32
+        texto = f"{centigrados}°C son {total}°F"
 
-        alert("Temperatura Fahrenheit", total )
+        alert(title = "Temperatura Fahrenheit", message = texto )
 
         self.txt_temperatura_c.delete(0,100)
 
     def btn_convertir_f_c_on_click(self):
         fahrenheit = float(self.txt_temperatura_f.get())
         total = (fahrenheit - 32) * 5/9
+        texto = f"{fahrenheit}°F son {total}°C"
 
-        alert("Temperatura Centigrados", total)
+        alert(title = "Temperatura en Centigrados", message = texto)
 
         self.txt_temperatura_f.delete(0,100)
     
