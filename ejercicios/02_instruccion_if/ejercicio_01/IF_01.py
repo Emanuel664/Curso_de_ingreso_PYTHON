@@ -34,7 +34,27 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        """
+        Operadores relacionales
+        > mayor
+        < menor
+        >= mayor igual
+        <= menor igual
+        == igual
+        != distinto
+        ---------------
+        Operadores Logicos
+        and 
+        or
+        not
+        """
+        edad = int(self.txt_edad.get())
+
+        if edad == 18:
+            texto = "Usted tiene 18 años"
+
+            alert("Edad", texto)
+
 
         
         

@@ -67,8 +67,8 @@ class App(customtkinter.CTk):
         ancho = float(self.txt_ancho.get())
 
         metrosCuadrados = largo * ancho
-        metrosLineales = ((2*largo) + (2*ancho)) / 100
-        quebrachoGrueso = metrosLineales / 250
+        metrosLineales = (2*largo) + (2*ancho)
+        quebrachoGrueso = 4 + (metrosLineales // 250)
         quebrachoFino = (metrosLineales // 12) - 4
         varillas = metrosLineales // 2
         alambre = metrosLineales * 7 
