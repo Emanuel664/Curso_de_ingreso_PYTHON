@@ -63,7 +63,20 @@ class App(customtkinter.CTk):
         self.btn_calcular.grid(row=3, pady=10, columnspan=2, sticky="nsew")
 
     def btn_calcular_on_click(self):
-        pass
+        largo = float(self.txt_largo.get())
+        ancho = float(self.txt_ancho.get())
+
+        metrosCuadrados = largo * ancho
+        metrosLineales = ((2*largo) + (2*ancho)) / 100
+        quebrachoGrueso = metrosLineales / 250
+        quebrachoFino = (metrosLineales // 12) - 4
+        varillas = metrosLineales // 2
+        alambre = metrosLineales * 7 
+
+        texto = f"En total hay {metrosCuadrados}m² y {metrosLineales}ml \n Entran {quebrachoGrueso} quebrachos gruesos \n {quebrachoFino} quebrachos finos \n {varillas} varillas y un alambrado de {alambre}ml" 
+
+        alert (title="Calculo", message= texto)
+        
 
 
 if __name__ == "__main__":
