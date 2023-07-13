@@ -33,7 +33,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass  
+
+        aleatorio = random.randint(1, 10)
+
+        if aletario >= 6:
+            texto = f"Promocion ditecta, la nota es {aleatorio} "
+
+        alert("Nota", texto)  
             
 
 if __name__ == "__main__":
