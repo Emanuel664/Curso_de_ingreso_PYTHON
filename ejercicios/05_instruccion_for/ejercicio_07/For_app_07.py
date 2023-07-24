@@ -22,7 +22,25 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        
+        contador_de_divisores = 0
+        numero_pedido = prompt("Ingrese un numero", "Numero")
+
+        while numero_pedido == None or not numero_pedido.isdigit():
+            numero_pedido = prompt("Ingrese un numero", "Numero")
+
+        numero_pedido = int(numero_pedido)
+
+        rango_a_recorrer = range(1, numero_pedido)
+
+        for numero in rango_a_recorrer:
+
+            if numero_pedido % numero == 0:
+                print(numero)
+                contador_de_divisores += 1
+        print("-------------------")
+
+        alert("Divisores", f"Se encontraron {contador_de_divisores} divisores")
         
     
 if __name__ == "__main__":

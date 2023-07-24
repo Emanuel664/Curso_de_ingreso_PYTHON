@@ -29,7 +29,22 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        pass
+        
+        while True:
+            nombre = prompt(title = "Nombre", prompt = "Ingrese el nombre del candidato")
+            while (nombre == None or nombre == "") or not nombre.isalpha():
+                nombre = prompt("Nombre","Ingrese el nombre del candidato")
+
+            edad = prompt("Edad", "Ingrese su edad")
+            while edad == None or not edad.isdigit() or int(edad) < 25:
+                edad = prompt("Edad", "Ingrese una edad valida")
+
+            cantidad_de_votos = prompt("Votos", "Cantidad de votos")
+            while cantidad_de_votos == None or not cantidad_de_votos.isdigit() or int(cantidad_de_votos) <= 0:
+                cantidad_de_votos = prompt("Error", "Ingrese una cantidad valida")
+                
+
+
 
 
 if __name__ == "__main__":

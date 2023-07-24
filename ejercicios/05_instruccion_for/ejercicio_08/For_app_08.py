@@ -21,7 +21,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        
+        numero_pedido = prompt("Ingrese un numero", "Numero")
+
+        while numero_pedido == None or not numero_pedido.isdigit():
+            numero_pedido = prompt("Ingrese un numero", "Numero")
+
+        numero_pedido = int(numero_pedido)
+        rango_a_recorrer = range(1, numero_pedido)
+
+        for numero in rango_a_recorrer:
+            
     
 if __name__ == "__main__":
     app = App()

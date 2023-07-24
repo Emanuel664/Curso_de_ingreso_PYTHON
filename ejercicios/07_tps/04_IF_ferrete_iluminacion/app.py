@@ -69,7 +69,7 @@ class App(customtkinter.CTk):
                             else: 
                                 descuento = 0.05 """
         #Forma 2
-        if cantidad >= 6:
+        """ if cantidad >= 6:
             descuento = 0.5
         elif cantidad == 5:
             if marca == "ArgentinaLuz":
@@ -89,7 +89,28 @@ class App(customtkinter.CTk):
             else:
                 descuento = 0.05
         else:
-            descuento = 0
+            descuento = 0 """
+        #Forma 3:
+        match cantidad:
+            case 6 | 7 | 8 | 9 | 10 | 11 | 12:
+                descuento = 0.5
+            case 5:
+                if marca == "ArgentinaLuz":
+                    descuento = 0.4
+            case 4:
+                if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
+                   descuento = 0.25
+                else:
+                    descuento = 0.2
+            case 3:
+                if marca == "ArgentinaLuz":
+                   descuento = 0.15
+                elif marca == "FelipeLamparas":
+                    descuento = 0.1
+                else:
+                    descuento = 0.05
+            case _:
+                descuento = 0
                    
 
         precio_descuento = precio - (precio * descuento)

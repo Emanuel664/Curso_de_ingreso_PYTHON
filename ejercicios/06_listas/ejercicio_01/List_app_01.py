@@ -24,7 +24,39 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        # lista_de_nombres = []
+
+        # lista_de_nombres.append('Juan')
+
+        # lista_de_nombres.append('Pedro')
+
+        # lista_de_nombres.append('Juan')
+
+        # print(lista_de_nombres.index('Juan'))
+
+        # indice = 3
+
+        # if len(lista_de_nombres) >= index:
+        #     print(lista_de_nombres[3])
+
+        # lista_de_nombres.pop()
+
+        # for nombre in lista_de_nombres:
+        #     print(nombre) 
+         
+        lista = self.lista_datos
+
+        # contador = 0
+        # while contador < len(lista):
+
+        #     elemento = lista[contador]
+
+        #     contador += 1
+
+        #     print(elemento)
+
+        alert("Lista", lista)
+
         
         
     
